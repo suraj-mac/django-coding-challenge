@@ -30,7 +30,7 @@ class ArticleListView(generic.ListView):
 
         totals = dict()
 
-        for article in Article.objects.exclude(published=None)[:100]:
+        for article in Article.objects.exclude(published=None):
             if article.genre in totals.keys():
                 totals[article.genre] += 1
             else:

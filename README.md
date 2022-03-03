@@ -9,6 +9,8 @@ The application is a work in progress that houses authors, articles, and associa
 
 There are open GitHub issues with user reports and feature requests that need to be addressed. Please create a pull request that addresses these issues.
 
+Along with the open GitHub issues, some files you interact with are in dire need of refactoring because they do not adhere to the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) or good desgin in general. Using class inheritance is a good approach and is strongly encouraged during this refactoring.
+
 We have included a sqlite (`db.sqlite3`) database that has been prepopulated with random data. The library and code to generate this test data is provided below.
 
 ## Test Data Generation Process
