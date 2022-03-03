@@ -1,5 +1,5 @@
 from django.views import generic
-from .models import Article, Genre
+from .models import Article
 
 
 # Create your views here.
@@ -11,7 +11,7 @@ class ArticleDetailView(generic.DetailView):
 
         totals = dict()
 
-        for article in Article.objects.exclude(published=None)[:100]:
+        for article in Article.objects.exclude(published=None):
             if article.genre in totals.keys():
                 totals[article.genre] += 1
             else:
@@ -30,7 +30,7 @@ class ArticleListView(generic.ListView):
 
         totals = dict()
 
-        for article in Article.objects.exclude(published=None):
+        for article in Article.objects.exclude(published=None)[:100]:
             if article.genre in totals.keys():
                 totals[article.genre] += 1
             else:
@@ -51,7 +51,7 @@ class ArticleWeekView(generic.WeekArchiveView):
 
         totals = dict()
 
-        for article in Article.objects.exclude(published=None)[:10]:
+        for article in Article.objects.exclude(published=None):
             if article.genre in totals.keys():
                 totals[article.genre] += 1
             else:

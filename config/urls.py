@@ -20,7 +20,6 @@ from articles import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('articles/<int:year>/', views.ArticleYearView.as_view()),
-    path('articles/<int:year>/<int:week>/', views.ArticleWeekView.as_view()),
     path('articles/<int:year>/<int:month>/', views.ArticleMonthView.as_view()),
     path('articles/', views.ArticleListView.as_view()),
     path('articles/<pk>', views.ArticleDetailView.as_view()),
