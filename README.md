@@ -2,10 +2,10 @@
 You can complete this coding challenge by creating a python virtual environment or by creating a Dockerfile and docker-compose.yml file to run the environment.
 
 The application is a work in progress that houses authors, articles, and associated data. Currently, a user can navigate to the following URLS to access information.
-- http://localhost:8000/articles/ --> list of first 50 published articles
-- http://localhost:8000/articles/<year>/ --> articles published in corresponding year
-- http://localhost:8000/articles/<year>/<month> --> articles published in the corresponding year/month
-- http://localhost:8000/articles/<pk> --> single view of article based on the pk (primary key)
+- `http://localhost:8000/articles/` --> list of first 50 published articles
+- `http://localhost:8000/articles/<year>/` --> articles published in corresponding year
+- `http://localhost:8000/articles/<year>/<month>/` --> articles published in the corresponding year/month
+- `http://localhost:8000/articles/<pk>/` --> single view of article based on the pk (primary key)
 
 There are open GitHub issues with user reports and feature requests that need to be addressed. Please create a pull request that addresses these issues.
 
