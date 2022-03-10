@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+
 from articles import views
+from authors import views as author_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,6 +25,7 @@ urlpatterns = [
     path('articles/<int:year>/<int:month>/', views.ArticleMonthView.as_view()),
     path('articles/', views.ArticleListView.as_view()),
     path('articles/<pk>', views.ArticleDetailView.as_view()),
+    path('authors/<pk>', author_views.AuthorsDetailView.as_view(), name='author-detail'),
 
 
 
