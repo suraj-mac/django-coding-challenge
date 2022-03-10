@@ -5,11 +5,11 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <li>
-                    {% for article in article_list|slice:":50" %}
+                {% for article in article_list|slice:":50" %}
+                    {% if article.is_published %}
                         <li>{{ article.title }} by {{ article.author }} | Published: {{ article.is_published|yesno }}</li>
-                    {% endfor %}
-                </li>
+                    {% endif %}
+                {% endfor %}
             </div>
             <div class="col">
                 <table class="table">
