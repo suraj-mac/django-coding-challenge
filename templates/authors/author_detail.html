@@ -1,3 +1,31 @@
 {% extends "base.html" %}
+{% load humanize %}
 {% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>{{ author.first_name }}</h1>
+                <h2>{{ author.last_name }}</h2>
+                <h3>{{ author.pseudonym }}</h3>
+            </div>
+             <div class="col">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Genre</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for genre, total in totals.items %}
+                        <tr>
+                            <td>{{ genre }}</td>
+                            <td>{{ total|intcomma }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 {% endblock body %}
